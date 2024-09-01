@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    flex: 1 1 100%;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    flex: 1 1 45%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+    button[type="button"] {
+        background-color: #dc3545;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+.lawyer-list {
+    margin-top: 20px;
+}
+
+    .lawyer-list table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .lawyer-list th, .lawyer-list td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .lawyer-list th {
+        background-color: #f8f9fa;
+    }
+
+    .lawyer-list td {
+        color: #333;
+    }
+
+        .lawyer-list td:last-child {
+            text-align: center;
+        }
+
+    .lawyer-list tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .lawyer-list button {
+        border: none;
+        cursor: pointer;
+    }
+
+        .lawyer-list button.edit {
+            color: #007bff;
+        }
+
+        .lawyer-list button.delete {
+            color: #dc3545;
+        }
+
+@media (max-width: 768px) {
+    input, select {
+        flex: 1 1 100%;
+    }
+
+    .lawyer-list th, .lawyer-list td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .lawyer-list th, .lawyer-list td {
+        display: block;
+        text-align: right;
+        padding: 8px 0;
+        position: relative;
+        padding-left: 50%;
+    }
+
+        .lawyer-list th::before, .lawyer-list td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 45%;
+            padding-left: 15px;
+            font-weight: bold;
+            text-align: left;
+            color: #555;
+        }
+}
